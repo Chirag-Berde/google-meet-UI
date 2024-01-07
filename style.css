@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #313131;
+}
+.large-img:hover,
+.medium-img:hover {
+  cursor: pointer;
+}
+/* media queries for large screen */
+@media screen and (min-width: 1199px) {
+  .main-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.presenting-container {
+  background: #535353;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 4px;
+}
+.presenting {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+.presenting h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Poppins";
+}
+.smallImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+/* content css */
+.content-container {
+  margin-top: 28px;
+}
+.large-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+/* side content */
+.side-content {
+  position: relative;
+}
+.medium-img {
+  width: 100%;
+  height: 100%;
+}
+.side-content span {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 1.15rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 0.2rem;
+  left: 0.3rem;
+}
+
+/* footer content */
+.footer-content h2 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "poppins";
+}
+.middle-icons span {
+  background: #535353;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+}
+.middle-icons span:last-child {
+  background: #ff4343;
+  border-radius: 40px;
+  width: 62px;
+  height: 36px;
+}
+.middle-icons span i,
+.end-icons span i {
+  color: #ffffff;
+  margin-top: 10px;
+}
+.middle-icons span:hover,
+.end-icons span:hover {
+  cursor: pointer;
+}
+.end-icons span {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+}
+.middle-icons span i:hover,
+.end-icons span i:hover {
+  scale: 1.5;
+  transition: 1s;
+}
+/* blink text animation */
+.blink-soft {
+  margin-bottom: 0 !important;
+  animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+/* media queries for mobile and tablet */
+@media screen and (max-width: 1024px) {
+  .content-container .row .col-lg-6:nth-child(2) {
+    margin-top: 28px;
+  }
+  .side-content span {
+    font-size: 0.75rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}
